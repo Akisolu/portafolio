@@ -11,6 +11,7 @@ vanilla. Sin frameworks, fuentes externas ni dependencias de ejecución.
 
 ```
 index.html                  Página única (5 secciones), SEO/OG y JSON-LD
+404.html                    Página de error con el mismo estilo visual
 css/styles.css              Tokens de diseño y layout
 js/main.js                  Filtros de proyectos, nav activa, año
 favicon.svg                 Icono de pestaña (>_ en cian sobre oscuro)

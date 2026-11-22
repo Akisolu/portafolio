@@ -24,7 +24,7 @@ jobs:
       - name: Ensamblar sitio estático
         run: |
           mkdir -p _site
-          cp -r index.html css js assets favicon.svg .nojekyll _site/
+          cp -r index.html 404.html css js assets favicon.svg .nojekyll _site/
 
       - name: Preparar Pages
         uses: actions/configure-pages@v5

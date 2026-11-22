@@ -305,3 +305,27 @@ code, .mono { font-family: var(--mono); }
   .project-card, .stat, .hero-card { border-color: #ccc; background: #fff; }
   .badges li, .stack li { border-color: #999; background: transparent; }
 }
+
+/* ---------- Página 404 ---------- */
+
+.not-found-main {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid; place-content: center;
+  gap: 1rem; padding-block: 3rem;
+}
+.not-found-main .eyebrow { margin-bottom: 0; }
+.not-found-code {
+  font: 700 clamp(4rem, 12vw, 8rem)/1 var(--mono);
+  letter-spacing: -.05em; color: var(--pink); margin: 0;
+}
+.not-found-main h1 { font-size: clamp(1.4rem, 1rem + 2vw, 2rem); }
+.not-found-copy { color: var(--text-muted); max-width: 48ch; margin: 0; }
+.not-found-terminal {
+  font: .8rem/1.7 var(--mono); color: var(--blue);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1rem 1.2rem;
+  margin: .5rem 0 0; max-width: 100%; overflow-x: auto;
+}
+.not-found-terminal .err { color: var(--pink); }
+.not-found-main .actions { margin: .5rem 0 0; }
