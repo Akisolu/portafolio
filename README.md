@@ -10,14 +10,20 @@ vanilla. Sin frameworks, fuentes externas ni dependencias de ejecución.
 ## Estructura
 
 ```
-index.html                  Página única (5 secciones)
+index.html                  Página única (5 secciones), SEO/OG y JSON-LD
 css/styles.css              Tokens de diseño y layout
 js/main.js                  Filtros de proyectos, nav activa, año
+favicon.svg                 Icono de pestaña (>_ en cian sobre oscuro)
+assets/og-image.png         Imagen 1200x630 para compartir en redes
 assets/README.md            Instrucciones para el CV
 .github/workflows/deploy.yml Deploy automático a GitHub Pages
 .nojekyll                   Desactiva el procesamiento Jekyll
 .gitignore                  Ignora el archivo local `a` (brief original)
 ```
+
+El `<head>` incluye meta tags SEO, Open Graph, Twitter Card, favicon y datos
+estructurados `Person` de schema.org. La imagen OG se generó con Pillow de forma
+puntual (desinstalado después); no hay dependencias en el repositorio.
 
 El archivo `a` de la raíz contiene el brief original. Se conserva en local pero
 está excluido por `.gitignore`: no se sube ni se publica. Elimínalo cuando ya

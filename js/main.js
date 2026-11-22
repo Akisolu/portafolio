@@ -3,11 +3,17 @@
 (function () {
   'use strict';
 
-  var buttons = document.querySelectorAll('[data-filter]');
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.project-card'));
+  function toArray(nodeList) {
+    return Array.prototype.slice.call(nodeList);
+  }
+
+  var filters = toArray(document.querySelectorAll('input[data-filter]'));
+  var cards = toArray(document.querySelectorAll('.project-card'));
   var status = document.getElementById('filter-status');
 
-  function applyFilter(value, label) {
+  function applyFilter(input) {
+    var value = input.getAttribute('data-filter');
+    var label = input.getAttribute('data-label');
     var visible = 0;
 
     cards.forEach(function (card) {
@@ -16,10 +22,8 @@
       if (show) visible += 1;
     });
 
-    buttons.forEach(function (button) {
-      var active = button.getAttribute('data-filter') === value;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    filters.forEach(function (filter) {
+      filter.closest('.filter').classList.toggle('is-active', filter === input);
     });
 
     if (status) {
@@ -29,22 +33,21 @@
     }
   }
 
-  buttons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      applyFilter(button.getAttribute('data-filter'), button.getAttribute('data-label'));
-    });
+  filters.forEach(function (filter) {
+    filter.addEventListener('change', function () { applyFilter(filter); });
   });
 
   /* Los enlaces marcados como placeholder no deben saltar al inicio de la página. */
-  document.querySelectorAll('a[data-placeholder]').forEach(function (link) {
+  toArray(document.querySelectorAll('a[data-placeholder]')).forEach(function (link) {
     link.addEventListener('click', function (event) { event.preventDefault(); });
   });
 
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  var sections = document.querySelectorAll('main section[id]');
-  var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+  /* Visual: :target-current nativo donde exista; .is-active como fallback. */
+  var sections = toArray(document.querySelectorAll('main section[id]'));
+  var navLinks = toArray(document.querySelectorAll('.site-nav a[href^="#"]'));
 
   if ('IntersectionObserver' in window && sections.length && navLinks.length) {
     var observer = new IntersectionObserver(function (entries) {
@@ -53,7 +56,7 @@
         navLinks.forEach(function (link) {
           var active = link.getAttribute('href') === '#' + entry.target.id;
           link.classList.toggle('is-active', active);
-          if (active) link.setAttribute('aria-current', 'true');
+          if (active) link.setAttribute('aria-current', 'location');
           else link.removeAttribute('aria-current');
         });
       });
