@@ -14,7 +14,13 @@ index.html                  Página única (5 secciones), SEO/OG y JSON-LD
 404.html                    Página de error con el mismo estilo visual
 css/styles.css              Tokens de diseño y layout
 js/main.js                  Filtros de proyectos, nav activa, año
-favicon.svg                 Icono de pestaña (>_ en cian sobre oscuro)
+favicon.svg                 Icono vectorial (>_ en cian sobre oscuro)
+favicon.ico                 Icono ICO para Google y navegadores
+favicon-16x16.png           Icono PNG 16x16
+favicon-32x32.png           Icono PNG 32x32
+apple-touch-icon.png        Icono 180x180 para iOS
+android-chrome-*.png        Iconos 192x192 y 512x512 para Android
+site.webmanifest            Manifiesto PWA
 assets/og-image.png         Imagen 1200x630 para compartir en redes
 assets/README.md            Instrucciones para el CV
 .github/workflows/deploy.yml Deploy automático a GitHub Pages
@@ -22,9 +28,11 @@ assets/README.md            Instrucciones para el CV
 .gitignore                  Ignora el archivo local `a` (brief original)
 ```
 
-El `<head>` incluye meta tags SEO, Open Graph, Twitter Card, favicon y datos
-estructurados `Person` de schema.org. La imagen OG se generó con Pillow de forma
-puntual (desinstalado después); no hay dependencias en el repositorio.
+El `<head>` incluye meta tags SEO, Open Graph, Twitter Card, iconos en varios
+formatos, manifiesto PWA y datos estructurados `Person` de schema.org. La imagen
+OG y los iconos se generaron con Pillow de forma puntual (desinstalado después);
+no hay dependencias en el repositorio. `twitter:site` queda pendiente del handle
+real de X.
 
 El archivo `a` de la raíz contiene el brief original. Se conserva en local pero
 está excluido por `.gitignore`: no se sube ni se publica. Elimínalo cuando ya
