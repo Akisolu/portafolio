@@ -1,11 +1,13 @@
 # Recursos
 
-Carpeta única para todos los recursos binarios del sitio.
+Carpeta de recursos del sitio.
 
-## Imágenes e iconos
+## `img/`
+
+Todas las imágenes e iconos:
 
 - `og-image.png`: imagen 1200×630 usada en `og:image` y `twitter:image`.
-- `favicon.svg`: icono vectorial (usado por navegadores modernos).
+- `favicon.svg`: icono vectorial (navegadores modernos).
 - `favicon.ico`: icono ICO para Google y navegadores antiguos.
 - `favicon-16x16.png`, `favicon-32x32.png`: tamaños PNG para pestañas.
 - `apple-touch-icon.png`: 180×180 para "Añadir a pantalla de inicio" en iOS.
