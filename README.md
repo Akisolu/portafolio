@@ -67,8 +67,6 @@ directamente en el navegador, porque todas las rutas son relativas.
 
 - **CV:** el botón *Descargar CV* es un placeholder (`href="#"`). Sigue las
   instrucciones en `assets/README.md` para conectarlo.
-- **LinkedIn:** sigue marcado como *placeholder* en la sección Contacto;
-  sustituir por el dato real. El correo ya está conectado.
 
 ## Enlaces
 
