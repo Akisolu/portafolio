@@ -14,15 +14,16 @@ index.html                  Página única (5 secciones), SEO/OG y JSON-LD
 404.html                    Página de error con el mismo estilo visual
 css/styles.css              Tokens de diseño y layout
 js/main.js                  Filtros de proyectos, nav activa, año
-favicon.svg                 Icono vectorial (>_ en cian sobre oscuro)
-favicon.ico                 Icono ICO para Google y navegadores
-favicon-16x16.png           Icono PNG 16x16
-favicon-32x32.png           Icono PNG 32x32
-apple-touch-icon.png        Icono 180x180 para iOS
-android-chrome-*.png        Iconos 192x192 y 512x512 para Android
+assets/                     Todos los recursos binarios e imágenes
+  og-image.png              Imagen 1200x630 para compartir en redes
+  cv-miguel-morillo.pdf     CV conectado en el botón "Descargar CV"
+  favicon.svg / favicon.ico Iconos vectorial e ICO
+  favicon-16x16.png         Icono PNG 16x16
+  favicon-32x32.png         Icono PNG 32x32
+  apple-touch-icon.png      Icono 180x180 para iOS
+  android-chrome-*.png      Iconos 192x192 y 512x512 para Android
+  README.md                 Índice de recursos
 site.webmanifest            Manifiesto PWA
-assets/og-image.png         Imagen 1200x630 para compartir en redes
-assets/README.md            Instrucciones para el CV
 .github/workflows/deploy.yml Deploy automático a GitHub Pages
 .nojekyll                   Desactiva el procesamiento Jekyll
 .gitignore                  Ignora el archivo local `a` (brief original)
@@ -63,10 +64,10 @@ directamente en el navegador, porque todas las rutas son relativas.
 **Settings → Pages → Build and deployment → Source: Deploy from a branch →
 `main` / `/ (root)` → Save.** El archivo `.nojekyll` ya está incluido.
 
-## Pendiente antes de publicar
+## Pendiente
 
-- **CV:** el botón *Descargar CV* es un placeholder (`href="#"`). Sigue las
-  instrucciones en `assets/README.md` para conectarlo.
+- `twitter:site`: añadir el handle real de X cuando esté disponible (placeholder
+  comentado en el `<head>` de `index.html`).
 
 ## Enlaces
 

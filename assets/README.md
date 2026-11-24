@@ -1,13 +1,21 @@
-# Assets
+# Recursos
 
-Coloca aquí el CV final con este nombre exacto:
+Carpeta única para todos los recursos binarios del sitio.
 
-```
-assets/cv-miguel-morillo.pdf
-```
+## Imágenes e iconos
 
-Después, en `index.html`, cambia el botón *Descargar CV* de `href="#"` a
-`href="assets/cv-miguel-morillo.pdf"` y elimina los atributos `data-placeholder`
-y `aria-disabled="true"`, además de la etiqueta visible "pendiente". El CV debe
-incluir el correo (miguel.morillo.dev@gmail.com), el LinkedIn (linkedin.com/in/miguel-morillo-dev) y el enlace definitivos del portafolio
-(`https://akisolu.github.io/portafolio/`).
+- `og-image.png`: imagen 1200×630 usada en `og:image` y `twitter:image`.
+- `favicon.svg`: icono vectorial (usado por navegadores modernos).
+- `favicon.ico`: icono ICO para Google y navegadores antiguos.
+- `favicon-16x16.png`, `favicon-32x32.png`: tamaños PNG para pestañas.
+- `apple-touch-icon.png`: 180×180 para "Añadir a pantalla de inicio" en iOS.
+- `android-chrome-192x192.png`, `android-chrome-512x512.png`: iconos PWA.
+
+## Documentos
+
+- `cv-miguel-morillo.pdf`: CV final, enlazado desde el botón *Descargar CV* de `index.html`.
+
+Si se regeneran las imágenes, se usa Pillow solo de forma temporal y se desinstala
+después. Se mantiene la paleta `#0d1117` / `#77e6e5` / `#ea79a7` y no se usan
+guiones largos en ningún texto. Si se conservan los nombres de archivo, no hace
+falta tocar `index.html`, `404.html` ni `site.webmanifest`.

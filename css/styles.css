@@ -128,13 +128,7 @@ code, .mono { font-family: var(--mono); }
 .btn-primary:hover { background: #9af1f0; border-color: #9af1f0; }
 .btn-ghost { border-color: var(--border-strong); color: var(--text); background: transparent; }
 .btn-ghost:hover { border-color: var(--blue); color: var(--cyan); }
-.btn-placeholder { border-style: dashed; }
-.btn-hint {
-  font-size: .66rem; text-transform: uppercase; letter-spacing: .06em;
-  color: var(--pink); border: 1px solid rgba(234, 121, 167, .4);
-  border-radius: 4px; padding: .05rem .3rem;
-}
-.notice { font: .78rem/1.6 var(--mono); color: var(--blue); margin: 0; }
+
 
 .hero-card {
   background: linear-gradient(160deg, var(--surface-2), var(--surface));
@@ -256,15 +250,8 @@ code, .mono { font-family: var(--mono); }
   align-items: baseline; padding: .9rem .2rem; border-bottom: 1px solid var(--border);
   font-size: .92rem; overflow-wrap: anywhere;
 }
-.contact-list a, .contact-list code { font: .85rem var(--mono); }
+.contact-list a { font: .85rem var(--mono); }
 .contact-kind { font: .72rem var(--mono); color: var(--blue); text-transform: uppercase; letter-spacing: .05em; }
-.contact-list .is-placeholder code { color: var(--text-muted); }
-.placeholder-tag {
-  display: inline-block; margin-left: .3rem; padding: .05rem .3rem;
-  font: .62rem var(--mono); color: var(--pink); text-transform: lowercase;
-  border: 1px dashed rgba(234, 121, 167, .45); border-radius: 3px; letter-spacing: 0;
-}
-.section-body > .notice { margin-top: 1rem; }
 
 /* ---------- Footer ---------- */
 
