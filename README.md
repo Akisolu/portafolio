@@ -27,7 +27,6 @@ assets/                     Recursos del sitio
 site.webmanifest            Manifiesto PWA
 .github/workflows/deploy.yml Deploy automático a GitHub Pages
 .nojekyll                   Desactiva el procesamiento Jekyll
-.gitignore                  Ignora el archivo local `a` (brief original)
 ```
 
 El `<head>` incluye meta tags SEO, Open Graph, Twitter Card, iconos en varios
@@ -35,10 +34,6 @@ formatos, manifiesto PWA y datos estructurados `Person` de schema.org. La imagen
 OG y los iconos se generaron con Pillow de forma puntual (desinstalado después);
 no hay dependencias en el repositorio. `twitter:site` queda pendiente del handle
 real de X.
-
-El archivo `a` de la raíz contiene el brief original. Se conserva en local pero
-está excluido por `.gitignore`: no se sube ni se publica. Elimínalo cuando ya
-no lo necesites.
 
 ## Probar en local
 
@@ -53,17 +48,15 @@ directamente en el navegador, porque todas las rutas son relativas.
 
 ## Desplegar en GitHub Pages
 
-### Opción A: GitHub Actions (incluida)
+### Deploy con GitHub Actions (único método)
 
 1. Sube el repositorio a `github.com/Akisolu/portafolio` en la rama `main`.
 2. En el repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 3. El workflow `.github/workflows/deploy.yml` se ejecuta en cada `push` a `main`.
 4. El sitio queda en https://akisolu.github.io/portafolio/ .
 
-### Opción B: sin workflow
-
-**Settings → Pages → Build and deployment → Source: Deploy from a branch →
-`main` / `/ (root)` → Save.** El archivo `.nojekyll` ya está incluido.
+No usar *Deploy from a branch*: eso generaría un segundo workflow de Pages y
+despliegues duplicados.
 
 ## Pendiente
 
