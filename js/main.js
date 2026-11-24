@@ -41,11 +41,6 @@
   var selected = filters.filter(function (filter) { return filter.checked; })[0];
   if (selected) applyFilter(selected);
 
-  /* Los enlaces marcados como placeholder no deben saltar al inicio de la página. */
-  toArray(document.querySelectorAll('a[data-placeholder]')).forEach(function (link) {
-    link.addEventListener('click', function (event) { event.preventDefault(); });
-  });
-
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
